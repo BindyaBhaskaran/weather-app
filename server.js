@@ -4,7 +4,7 @@ const bodyParser = require('body-parser'); //middle-ware
 
 let app = express()
 //const ejs = require('ejs'); //middle-ware
-
+const PORT = process.env.PORT
 
 
 app.use(express.static('public')); 
@@ -40,7 +40,7 @@ app.post('/',function(req,res){
 });
 })
 
-app.listen(3000, function(err){ //3000 is the default port for express
+app.listen(PORT, function(err){ //3000 is the default port for express
     if (err){
         console.log(err);
     }
